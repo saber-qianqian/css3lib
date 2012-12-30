@@ -1,0 +1,20 @@
+/*stylesheet start*/
+#contentwrap {
+  width: 480px;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+  overflow: hidden;
+  margin-top: 30px;
+}
+#content {
+  padding: 0 18px;
+  height: 117px;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+  -webkit-transition: height 0.3s ease-out;
+}
+#flod {
+  float: right;
+  line-height: 30px;
+  display: block;
+}

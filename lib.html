@@ -14,10 +14,64 @@
 	<section id="demo_flod">
 		<div id="contentwrap">
 			<div id="content">
-				
+				<div id="contentinner">
+					<p>新浪SHOW——随时随地美女直播</p>
+					<p>新浪SHOW 最具时尚气质的社交APP</p>
+					<p>手心玩转数万一线女主播，数万美女主播等你关注</p>
+					<p>最high的KTV，中国最好的声音</p>
+					<p>最精彩的激情炫舞派对，喜爱夜生活的你不容错过</p>
+					<p>同城知己悄悄话说不听，邂逅心中的Ta就是这么简单</p>
+					<p>多种类频道，一线主播，屌丝听众，视频连接中</p>
+					<p>主要功能： 主要功能：</p>
+					<ol>
+						<li>全新UI界面，超炫的体验，聊天更顺畅</li>
+						<li>支持横向全屏观看主播视频</li>
+						<li>新增人气主播功能，点击主播美图直接观看视频</li>
+						<li>新增截屏功能，将主播精彩瞬间分享给好友</li>
+						<li>全新广场模块，热门房间推荐，精彩活动好奖等你来拿</li>
+						<li>支持3麦的音视频独立控制，退出房间外仍支持声音播放</li>
+						<li>支持多帐号管理，流量统计，网络切换提醒</li>
+						<li>支持上传自己的头像，查看用户资料</li>
+					</ol>
+				</div>
 			</div>
 			<span id="flod">展开</span>
 		</div>
 	</section>
 </body>
+<script>
+var saber = {
+	$: function (id) {
+		return document.getElementById(id);
+	},
+	addEvent: function (targrt, type, fn) {
+		targrt.addEventListener(type, fn, false);
+	}
+};
+
+var pageC = {
+	flodO: {
+		flod: saber.$('flod'),
+		textHeight: saber.$('contentinner').clientHeight,
+		_height: saber.$('content').clientHeight,
+		_init: function() {
+			self = this;
+			saber.addEvent(this.flod, 'click', function() {
+				if(this.innerHTML == '展开'){
+					this.innerHTML = '闭合';
+					saber.$('content').style['height'] = (self.textHeight+36) + 'px';
+				} else {
+					this.innerHTML = '展开';
+					saber.$('content').style['height'] = (self._height) + 'px';
+					
+				}
+			});
+		}
+	},
+	init: function() {
+		this.flodO._init();
+	}
+};
+pageC.init();
+</script>
 </html>

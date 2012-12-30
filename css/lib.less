@@ -1,7 +1,37 @@
 .tf(@type, @time){
 	-webkit-transform: @type  @time ease-out;
 }
-
-.flod{
-	
+.center(){
+	margin: 0 auto;
 }
+.bd(@color){
+	border: 1px solid @color;
+}
+.ts(@type, @time, @method){
+	-webkit-transition: @type @time @method;
+}
+
+.flod(){
+	#contentwrap{
+		width: 480px;
+		.center;
+		.bd(#DDD);
+		overflow: hidden;
+		margin-top: 30px;
+	}
+	#content{
+		padding: 0 18px;
+		height: 117px;overflow: hidden;
+		border-bottom: 1px solid #ddd;
+		.ts(height, .3s, ease-out);
+	}
+	#flod{
+		float: right;
+		line-height: 30px;
+		display: block;
+	}
+}
+
+
+/*stylesheet start*/
+.flod;
