@@ -32,6 +32,37 @@
 	}
 }
 
+.layer(){
+	#demo_layer{
+		display: block;
+		width: 100%;
+		overflow: hidden;
+	}
+	#innerwrap{
+		width: 960px;
+		overflow: hidden;
+	}
+	[id^=layer]{
+		height: 533px;
+		width: 320px;
+		float: left;
+		overflow: auto;
+		box-sizing: border-box;
+		.bd(#DDD);
+		padding: 5px 15px;
+	}
+	#layer_2{
+		background: red;
+	}
+	#layer_3{
+		background: #DD3;
+	}
+	
+}
 
 /*stylesheet start*/
+[id^=demo]{
+	display: none;
+}
 .flod;
+.layer;

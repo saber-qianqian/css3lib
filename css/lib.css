@@ -1,4 +1,7 @@
 /*stylesheet start*/
+[id^=demo] {
+  display: none;
+}
 #contentwrap {
   width: 480px;
   margin: 0 auto;
@@ -17,4 +20,28 @@
   float: right;
   line-height: 30px;
   display: block;
+}
+#demo_layer {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+#innerwrap {
+  width: 960px;
+  overflow: hidden;
+}
+[id^=layer] {
+  height: 533px;
+  width: 320px;
+  float: left;
+  overflow: auto;
+  box-sizing: border-box;
+  border: 1px solid #dddddd;
+  padding: 5px 15px;
+}
+#layer_2 {
+  background: red;
+}
+#layer_3 {
+  background: #DD3;
 }
